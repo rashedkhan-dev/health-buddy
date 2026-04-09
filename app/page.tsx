@@ -142,7 +142,7 @@ export default function Home() {
       <nav className="bg-white p-4 shadow-sm flex justify-between items-center sticky top-0 z-10 border-b">
         <h1 className="text-xl font-bold text-blue-600 flex items-center gap-2"><Pill /> Health Buddy</h1>
         <div className="flex items-center gap-3">
-           <Mail size={18} className="text-green-500 animate-pulse" title="Email Reminder Active" />
+           <Mail size={18} className="text-green-500 animate-pulse" />
            <button onClick={() => sendNotification("টেস্ট ওষুধ", "১টি")} className="p-2 bg-blue-50 rounded-full text-blue-600 hover:bg-blue-100 transition">
              <Bell size={20} />
            </button>

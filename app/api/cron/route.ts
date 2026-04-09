@@ -15,7 +15,7 @@ export async function GET() {
 
     console.log(`সার্ভার চেক করছে: ${currentTime}`);
 
-    // ১. ডাটাবেজ থেকে এই সময়ের ওষুধগুলো খুঁজে বের করা
+    // ১. সুপাবেজ ডাটাবেজ থেকে এই সময়ের ওষুধগুলো খুঁজে বের করা
     const { data: medicines, error } = await supabase
       .from('medicines')
       .select('*')
@@ -28,8 +28,7 @@ export async function GET() {
       const medicineNames = medicines.map((m: any) => m.name).join(', ');
       console.log(`ওষুধ পাওয়া গেছে: ${medicineNames}`);
       
-      // এখানে ভবিষ্যতে আমরা সার্ভার-সাইড মেইল পাঠানোর লজিক যোগ করতে পারবো।
-      // আপাতত এটি ডাটাবেজ চেক সাকসেসফুল কি না তা নিশ্চিত করছে।
+      // ভবিষ্যতে এখানে সার্ভার থেকে মেইল পাঠানোর লজিক যোগ করা যাবে
     }
 
     return NextResponse.json({ 

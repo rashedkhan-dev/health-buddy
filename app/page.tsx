@@ -200,7 +200,7 @@ export default function Home() {
         <div className="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 text-center">
           <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-blue-200 rounded-2xl cursor-pointer hover:bg-blue-50">
             <Upload className="text-blue-500 mb-2" size={30} />
-            <p className="text-sm text-gray-500">প্রেসক্রিপশন আপলোড</p>
+            <p className="text-sm text-gray-500">প্রেসক্রিপশন</p>
             <input type="file" className="hidden" accept="image/*" onChange={uploadPrescription} />
           </label>
         </div>
